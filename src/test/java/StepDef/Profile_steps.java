@@ -1,0 +1,16 @@
+
+    package StepDef;
+
+import base.Config;
+import io.cucumber.java.en.Then;
+import PageObject.Profile_page;
+
+    public class Profile_steps extends Config {
+        Profile_page profile = new Profile_page(driver);
+
+        @Then("I will verify I successfully logged into my existing account")
+        public void iWillVerifyISuccessfullyLoggedIntoMyExistingAccount() {
+            profile.verifyIamInProfilePage();
+        }
+    }
+
